@@ -7,6 +7,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { BookModule } from './book/book.module';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
+import { ReservaModule } from './reserva/reserva.module';
 
 @Module({
   imports: [
@@ -17,7 +18,8 @@ import { AuthModule } from './auth/auth.module';
     TypeOrmModule.forRoot({ ...DataSourceConfig }),
     BookModule,
     UsersModule,
-    AuthModule
+    AuthModule,
+    ReservaModule
   ],
   controllers: [AppController],
   providers: [AppService],
