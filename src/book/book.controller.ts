@@ -3,7 +3,10 @@ import { BookService } from './book.service';
 import { CreateBookDto } from './dto/create-book.dto';
 import { UpdateBookDto } from './dto/update-book.dto';
 import { AuthGuard } from 'src/auth/guard/auth.guard';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
+@ApiTags("Libro")
+@ApiBearerAuth()
 @Controller('book')
 @UseGuards(AuthGuard)
 export class BookController {
